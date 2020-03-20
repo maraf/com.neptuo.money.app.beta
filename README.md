@@ -1,2 +1,3 @@
-# com.neptuo.money.app.beta
-Pre-release static assets for money.neptuo.com
+# Neptuo Money
+Pre-release static frontend for web-based Money app. <br>
+If you have something to say, please use https://github.com/maraf/Money/issues.
