@@ -1,11 +1,11 @@
 ﻿self.assetsManifest = {
   "assets": [
     {
-      "hash": "sha256-LqVyubOFS0uOfmuU43t1Ve1rw5wpmsKUSgAv7drzIBs=",
+      "hash": "sha256-\/7pNyQvndpNgzf6ywAxzpdQNoft22GKPO9C9IN+iSHc=",
       "url": "css\/site.min.css"
     },
     {
-      "hash": "sha256-FeiIYsq+wKiN5Pi6SVNFwjBS5CJ22uKULWplDwb5aiw=",
+      "hash": "sha256-PM6s3LJqJuBXVL72VR5wE12N7tTzx0ZPOJAepofVZgg=",
       "url": "css\/site.scss"
     },
     {
@@ -33,7 +33,7 @@
       "url": "images\/icon-w-64x64.png"
     },
     {
-      "hash": "sha256-KZNs9fx+trXv\/AkxnIB0ckNHZP6na4Oe2\/6nWzwF7gI=",
+      "hash": "sha256-DVnaY1dBWXi+RqPVk5cp5uh49lwRX6lqv6bm07yiMq8=",
       "url": "index.html"
     },
     {
@@ -373,7 +373,7 @@
       "url": "lib\/jquery\/dist\/jquery.min.map"
     },
     {
-      "hash": "sha256-vToyZi7PrUJ5sgPWDbXvFu3U36U6maJFw\/DIQhHQTIY=",
+      "hash": "sha256-w3GtQJBEhl9o0No+L0OO+eKTkSKD\/PJIHRPbvC1fxrk=",
       "url": "manifest.json"
     },
     {
@@ -577,5 +577,5 @@
       "url": "_framework\/blazor.boot.json"
     }
   ],
-  "version": "YYLrdh98.1"
+  "version": "XLXDtBXi"
 };
