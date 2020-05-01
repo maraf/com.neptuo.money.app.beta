@@ -577,5 +577,5 @@
       "url": "_framework\/blazor.boot.json"
     }
   ],
-  "version": "YYLrdh98"
+  "version": "YYLrdh98.1"
 };
