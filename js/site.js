@@ -8,7 +8,13 @@ window.Bootstrap = {
                 "show": true,
                 "focus": true
             }).on('shown.bs.modal', function () {
-                $(container).find('[data-autofocus]').first().trigger('focus');
+                var $container = $(container);
+                var $select = $container.find("[data-select]");
+                if ($select.length > 0) {
+                    $select[0].setSelectionRange(0, $select[0].value.length)
+                }
+
+                $container.find('[data-autofocus]').first().trigger('focus');
             });
         },
         Hide: function (container) {
@@ -25,7 +31,7 @@ window.Network = {
         function handler() {
             interop.invokeMethodAsync("Network.StatusChanged", navigator.onLine);
         }
-
+        
         window.addEventListener('online', handler);
         window.addEventListener('offline', handler);
 
@@ -59,6 +65,8 @@ window.PullToRefresh = {
         let container = document.body;
         const listenerOptions = { passive: true };
 
+        let $refreshUi = $(".refresher");
+
         container.addEventListener('touchstart', e => {
             _startY = 0;
             _maxY = 0;
@@ -74,6 +82,13 @@ window.PullToRefresh = {
         container.addEventListener('touchmove', e => {
             const y = e.touches[0].pageY;
             _maxY = Math.floor(y);
+
+            const delta = Math.floor(_maxY - _startY);
+            if (_isActive && delta > refreshTreshold) {
+                $refreshUi.addClass("visible");
+            } else {
+                $refreshUi.removeClass("visible");
+            }
         }, listenerOptions);
 
         container.addEventListener("touchend", () => {
@@ -81,6 +96,8 @@ window.PullToRefresh = {
             if (_isActive && delta > refreshTreshold) {
                 window.PullToRefresh.Raise();
             }
+
+            $refreshUi.removeClass("visible");
         }, listenerOptions);
     },
     Raise: function() {
