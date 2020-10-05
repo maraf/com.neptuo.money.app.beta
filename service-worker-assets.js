@@ -33,7 +33,7 @@
       "url": "images\/icon-w-64x64.png"
     },
     {
-      "hash": "sha256-bwvkqTzWSCcDuNHivszzLTzl9XO0crMxUJN\/bGRHQNQ=",
+      "hash": "sha256-W5PHrZ8isvWswvXCiUvlTbKolCDZ\/Nzz0ejKheqH3E4=",
       "url": "index.html"
     },
     {
@@ -529,15 +529,15 @@
       "url": "_framework\/Microsoft.JSInterop.WebAssembly.dll"
     },
     {
-      "hash": "sha256-5YqlSKpN5oN6wUrGeC7J1brSm+bw8gbzN10x3nkuNfY=",
+      "hash": "sha256-LwUrcz4Omw7+m3YUs\/lQdhbo\/8RBTbV5XMeDl7aGk84=",
       "url": "_framework\/Money.Accounts.dll"
     },
     {
-      "hash": "sha256-uq2EBIRcNDIJOHwCQwI2lQk8\/Pe4BIQoprNYz0mnwho=",
+      "hash": "sha256-De6rqztXGasiqFTx63nlq90sXje\/9jCpQaCLsrjO\/o4=",
       "url": "_framework\/Money.Accounts.Models.dll"
     },
     {
-      "hash": "sha256-OzLcQj2ed\/ZKtSCYoW0caXtQfJdN9WN3rxNFKZtDG7c=",
+      "hash": "sha256-Uwgz1pVaiYy4g\/9EWDHlwgMS9yec5UndLEmGN\/AiG\/U=",
       "url": "_framework\/Money.Api.Shared.dll"
     },
     {
@@ -553,7 +553,7 @@
       "url": "_framework\/Neptuo.dll"
     },
     {
-      "hash": "sha256-obR2h\/5JSqRTxEC9EpNuav4E7mgUGFpdSvIi9yfLm5Y=",
+      "hash": "sha256-Wg+qvW1i2oJweSkLYdW+WVL8fG\/DVLmyryj0h44Hf3s=",
       "url": "_framework\/Money.Blazor.Host.dll"
     },
     {
@@ -693,7 +693,7 @@
       "url": "_framework\/System.Private.CoreLib.dll"
     },
     {
-      "hash": "sha256-Xs3PNJugIEtVnnMw5QFC\/XV7vz\/HwdSZHQYTpkTbeJ4=",
+      "hash": "sha256-Pwt0HFZg52L\/Sksnl9k\/Ja8qaKyovVBlnicN14JD3dY=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -701,5 +701,5 @@
       "url": "_framework\/blazor.webassembly.js"
     }
   ],
-  "version": "JRHtKZGY"
+  "version": "bN7S58vV"
 };
