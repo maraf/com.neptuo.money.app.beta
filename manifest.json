@@ -1,20 +1,35 @@
 {
-  "short_name": "Money",
-  "name": "Money by Neptuo",
+  "short_name": "Money (beta)",
+  "name": "Money by Neptuo (beta)",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#0078D7",
   "theme_color": "#0078D7",
   "icons": [
     {
-      "src":"/images/icon-w-192x192.png",
-      "type":"image/png",
-      "sizes":"192x192"
+      "src": "/images/icon-w-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any"
     },
     {
-      "src":"/images/icon-w-512x512.png",
-      "type":"image/png",
-      "sizes":"512x512"
+      "src": "/images/icon-w-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any"
+    },
+    {
+      "src": "/images/icon-w-512x512-maskable.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/images/screenshot.png",
+      "sizes": "1239x842",
+      "type": "image/png"
     }
   ]
 }

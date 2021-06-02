@@ -1,6 +1,18 @@
 ﻿$bodyMinWidth: 380px;
 $actionButtonColor: #333;
 
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #007BFF;
+}
+
 .clear {
     clear: both;
 }
@@ -22,10 +34,28 @@ body {
     margin-bottom: 64px;
 }
 
-footer {
+footer.navbar {
     position: absolute;
     bottom: 0;
     width: 100%;
+    padding-top: 0.5rem;
+
+    .container {
+        border-top: 1px solid rgba(0,0,0,.1);
+    }
+
+    .navbar-text {
+        color: #aaaaaa !important;
+    }
+
+    a {
+        color: #aaaaaa !important;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
 }
 
 h4 {
@@ -36,13 +66,23 @@ h4 {
     color: #D85A5A;
 }
 
-.navbar {
+.navbar-dark {
     background-color: #0078D7;
     border-color: #398BF5;
+
+    .collapse {
+        @media (max-width: 991px) {
+            display: block;
+            visibility: hidden !important;
+            height: 0 !important;
+        }
+    }
 
     .navbar-collapse {
         border-color: #398BF5;
         height: calc(100vh - 56px);
+        visibility: visible;
+        transition: height .4s;
 
         @media (min-width: 992px) {
             height: auto;
@@ -56,6 +96,26 @@ h4 {
 
     .navbar-toggler {
         border: none;
+        outline: none;
+    }
+
+    @media (max-width: 992px) {
+        .nav-link {
+            padding-top: .75rem;
+            padding-bottom: .75rem;
+        }
+
+        hr {
+            margin-right: -18px;
+            margin-left: -26px;
+        }
+
+        @media (min-width: 596px) {
+            hr {
+                margin-right: -1rem;
+                margin-left: -1rem;
+            }
+        }
     }
 
     .navbar-nav > li > a,
@@ -124,7 +184,7 @@ h4 {
     min-width: $bodyMinWidth;
     left: 0;
     top: 56px;
-    padding: 14px 0 4px 0;
+    padding: 14px 0;
     background: #f5f5f5;
     border-bottom: 1px solid #dddddd;
 
@@ -132,46 +192,48 @@ h4 {
         font-size: 26px;
         color: #0078D7;
     }
-    /*h2 {
-        position: relative;
-        height: 40px;
-        overflow: hidden;
 
-        button {
-            position: absolute;
-            right: 0;
-        }
-    }*/
     h3 {
         line-height: 1.25;
-
-        span.text {
-            position: relative;
-            top: 6px;
-            display: inline-block;
-            overflow: hidden;
-            max-width: calc(100% - 177px);
-            text-overflow: ellipsis;
-            white-space: nowrap;
-        }
-
-        button {
-            float: right;
-        }
+        margin-bottom: 0;
+        flex: 1;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 
     h6 {
         width: 100%;
-        margin-bottom: 20px;
+        margin-top: .5rem;
+        margin-bottom: 0;
         text-overflow: ellipsis;
         line-height: 1.25;
         white-space: nowrap;
         overflow: hidden;
     }
+
+    .actions {
+        white-space: nowrap;
+    }
 }
 
 .header-append {
     margin-bottom: 150px;
+}
+
+.header-append-small {
+    margin-bottom: 110px;
+}
+
+.bottom-bar {
+    background: #f5f5f5;
+    border-top: 1px solid #dddddd;
+
+    .items-4, .items-3 {
+        span.text {
+            display: none;
+        }
+    }
 }
 
 .center {
@@ -185,6 +247,11 @@ h4 {
 .table {
     .btn-link {
         padding: 0;
+    }
+
+    .min-column {
+        max-width: 1px;
+        overflow: auto;
     }
 }
 
@@ -200,11 +267,15 @@ h4 {
 }
 
 .back-dark {
-    color: #eee;
+    color: #eee !important;
 
     .btn-link {
-        color: #eee;
+        color: #eee !important;
     }
+}
+
+.back-light {
+    color: #212529 !important;
 }
 
 .btn-icon, .btn-color {
@@ -387,38 +458,19 @@ h4 {
 
 .cards {
     margin: 20px 0;
-}
 
-.outcome-card {
-    padding: 30px;
-    border-bottom: 1px solid #eee;
+    .row {
+        &:first-child {
+            border-top: 1px solid #dee2e6 !important;
+        }
 
-    &:first-child {
-        border-top: 1px solid #eee;
-    }
-
-    &:hover {
-        background: #fcfcfc;
-    }
-
-    .data {
-        float: left;
-    }
-
-    .controls {
-        float: right;
+        &:hover {
+            background: #eee;
+        }
 
         .btn-link {
             color: $actionButtonColor;
         }
-    }
-
-    .amount {
-        margin-top: 0;
-    }
-
-    .category {
-        margin-bottom: 0;
     }
 }
 
@@ -429,8 +481,16 @@ h4 {
     }
 }
 
-/* ------ SPLASH SCREEN ------------------------------------------------------------------------ */
+.vertical-bar {
+    display: flex;
+    align-items: flex-end;
+}
 
+.cursor-pointer {
+    cursor: pointer;
+}
+
+/* ------ SPLASH SCREEN ------------------------------------------------------------------------ */
 .splash {
     position: absolute;
     top: 0;
@@ -590,6 +650,14 @@ h4 {
 
 .expenses-bag {
     position: relative;
+
+    button {
+        display: none;
+
+        &:last-child {
+            display: inline-block;
+        }
+    }
 }
 
 /* ------ PULL TO REFRESH ---------------------------------------------------------------------- */
