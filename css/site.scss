@@ -1,4 +1,5 @@
-﻿$bodyMinWidth: 380px;
+﻿$backgroundColor: #004074;
+$bodyMinWidth: 380px;
 $actionButtonColor: #333;
 
 ::-webkit-scrollbar {
@@ -10,7 +11,7 @@ $actionButtonColor: #333;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #007BFF;
+    background: #bbb;
 }
 
 .clear {
@@ -27,10 +28,10 @@ body {
     min-height: 100vh;
     padding-top: 30px;
     padding-bottom: 20px;
+    overflow-x: hidden;
 }
 
 .body-content {
-    margin-top: 20px;
     margin-bottom: 64px;
 }
 
@@ -66,8 +67,18 @@ h4 {
     color: #D85A5A;
 }
 
+.dropdown-item {
+    padding: .25rem 1rem;
+
+    .fa, .fas {
+        width: 20px;
+        text-align: center;
+        margin-right: 6px;
+    }
+}
+
 .navbar-dark {
-    background-color: #0078D7;
+    background-color: $backgroundColor;
     border-color: #398BF5;
 
     .collapse {
@@ -80,12 +91,28 @@ h4 {
 
     .navbar-collapse {
         border-color: #398BF5;
-        height: calc(100vh - 56px);
+        height: calc(100vh - 112px);
         visibility: visible;
         transition: height .4s;
+        overflow-x: hidden;
+        overflow-y: auto;
+
+        @media (min-width: 576px) {
+            height: calc(100vh - 56px);
+        }
 
         @media (min-width: 992px) {
             height: auto;
+            overflow-x: unset;
+            overflow-y: unset;
+        }
+
+        &::-webkit-scrollbar-track {
+            background: #004074;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background: #004074;
         }
     }
 
@@ -99,19 +126,28 @@ h4 {
         outline: none;
     }
 
-    @media (max-width: 992px) {
+    @media (min-width: 992px) and (max-width: 993px) {
+        .navbar-nav {
+            .nav-link {
+                padding-right: .35rem;
+                padding-left: .35rem;
+            }
+        }
+    }
+
+    @media (max-width: 991px) {
         .nav-link {
             padding-top: .75rem;
             padding-bottom: .75rem;
         }
 
-        hr {
+        hr.separator {
             margin-right: -18px;
             margin-left: -26px;
         }
 
         @media (min-width: 596px) {
-            hr {
+            hr.separator {
                 margin-right: -1rem;
                 margin-left: -1rem;
             }
@@ -146,9 +182,16 @@ h4 {
     a.navbar-brand {
         color: #fff;
         padding: 0;
+
+        .brand-author {
+            position: absolute;
+            bottom: 0;
+            left: 47px;
+            font-size: 8px;
+        }
     }
 
-    .nav-item hr {
+    .nav-item hr.separator {
         border-color: rgba(255,255,255,.5);
     }
 
@@ -179,11 +222,7 @@ h4 {
 }
 
 .header {
-    position: absolute;
-    width: 100%;
     min-width: $bodyMinWidth;
-    left: 0;
-    top: 56px;
     padding: 14px 0;
     background: #f5f5f5;
     border-bottom: 1px solid #dddddd;
@@ -229,7 +268,7 @@ h4 {
     background: #f5f5f5;
     border-top: 1px solid #dddddd;
 
-    .items-4, .items-3 {
+    .items-6, .items-5, .items-4, .items-3 {
         span.text {
             display: none;
         }
@@ -337,6 +376,10 @@ h4 {
     p:last-child {
         margin: 0;
     }
+
+    &.card-hover:hover {
+        background-color: #eee;
+    }
 }
 
 .sort {
@@ -443,17 +486,12 @@ h4 {
 
     .sort {
         float: right;
-        margin-right: 35px;
     }
 }
 
 .search {
     max-width: 900px;
     margin: 0 auto;
-}
-
-.search .controls {
-    display: none;
 }
 
 .cards {
@@ -498,7 +536,7 @@ h4 {
     width: 100%;
     height: 100%;
     overflow: hidden;
-    background: #0078D7;
+    background: $backgroundColor;
     z-index: 1031;
     transition: height 1s, opacity 0.5s linear 1s, margin-top 0.1s linear 2s;
 
@@ -514,8 +552,8 @@ h4 {
     }
 
     img {
-        width: 120px;
-        height: 120px;
+        width: 180px;
+        height: 180px;
         transition: margin-left 0.5s linear 0.5s, width 0.5s, height 0.5s;
     }
 
@@ -529,8 +567,8 @@ h4 {
         }
 
         img {
-            width: 40px;
-            height: 40px;
+            width: 60px;
+            height: 60px;
             margin-left: calc(-100vw + 71px);
 
             @media (min-width: 576px) {
@@ -726,4 +764,21 @@ h4 {
     40% {
         transform: scale(1);
     }
+}
+
+/* ------ SWIPING ------------------------------------------------------------------------------ */
+
+.swipe-left, .swipe-right {
+    position: absolute;
+    top: calc(100vh / 2 - 60px);
+    font-size: 2.5rem;
+    color: $backgroundColor;
+}
+
+.swipe-left {
+    left: -35px;
+}
+
+.swipe-right {
+    right: -35px;
 }
