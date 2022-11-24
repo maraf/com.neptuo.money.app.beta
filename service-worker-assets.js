@@ -325,15 +325,15 @@
       "url": "_framework\/dotnet.wasm"
     },
     {
-      "hash": "sha256-GYFbjFVvi9xwSvgVExnvUVC57VBYWKuSBti4X\/9F2SE=",
+      "hash": "sha256-M7\/CFtCgbB0HSUQD+BLxAphQhTgVtJ93KIFiNlpGios=",
       "url": "css\/site.css"
     },
     {
-      "hash": "sha256-\/+LhE8NS8Nhi1dt50FPv\/ePNN5urMOpKMF40qHm4tuk=",
+      "hash": "sha256-SAowM2I0R24skSn29Ijow2kRzFJS7s5Tj0bUYK9Aolk=",
       "url": "css\/site.min.css"
     },
     {
-      "hash": "sha256-m0jis0e6r1G11Kp21FvgieKEkTqYfqdezP+2NFF2ykM=",
+      "hash": "sha256-amoMK678g2d4yHOiDOt93bBgaJbMFSpdSHY0jr7j9To=",
       "url": "css\/site.scss"
     },
     {
@@ -713,7 +713,7 @@
       "url": "manifest.json"
     },
     {
-      "hash": "sha256-ovPk7zFsw3FNCN66khiATVVMifc0Tdd5u3X0mbt4sDk=",
+      "hash": "sha256-VJs41GUEWfYqj6amEac4logMTCDO+dJHXpckaE9iAUU=",
       "url": "release-notes.html"
     },
     {
@@ -721,5 +721,5 @@
       "url": "service-worker.register.js"
     }
   ],
-  "version": "P+g7wQ1b"
+  "version": "B10mnT1q"
 };
