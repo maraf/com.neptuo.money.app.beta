@@ -490,8 +490,8 @@ h4 {
   transition: opacity 0.5s;
 }
 .splash img {
-  width: 280px;
-  height: 280px;
+  width: 278px;
+  height: 278px;
   transition: opacity 0.5s, width 0.5s, height 0.5s;
 }
 .splash.animate {
