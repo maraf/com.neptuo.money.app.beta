@@ -25,7 +25,7 @@
       "url": "_framework\/icudt.dat"
     },
     {
-      "hash": "sha256-BWqdn0K9QVNFXAUP4yUqbrWumLw\/CEk4UIEKhPtd2sA=",
+      "hash": "sha256-KV1hhsQSnSzIr\/zhKc2HHuICyPUf14ul\/Ky\/8tgalqQ=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -149,27 +149,27 @@
       "url": "_framework\/Microsoft.Net.Http.Headers.dll"
     },
     {
-      "hash": "sha256-c9XSTNSGpeWWEzlsV02z5M2F1RXiDgzJD8AJVSBMKd4=",
+      "hash": "sha256-\/1r8pifLqVfVxbJNPPZAiphi36+\/FVCpSYZ03Gad2ck=",
       "url": "_framework\/Money.Accounts.dll"
     },
     {
-      "hash": "sha256-fmXFQERdFCDj43vA5yi3x8g\/cm83Mr4EYZGHdzM7\/C8=",
+      "hash": "sha256-y\/LVItwY1iSfI1Wt1g9GXFL9If6M2H165fPR0z4lGN8=",
       "url": "_framework\/Money.Accounts.Models.dll"
     },
     {
-      "hash": "sha256-az9R4j6czowYfllaqSkaClg22zfptDFzOKWkMq6TKd8=",
+      "hash": "sha256-XB0QJ3u5Tpov1ABcm1KODjbaZ0IO9\/D7TJVQ9YgAD1w=",
       "url": "_framework\/Money.Api.Shared.dll"
     },
     {
-      "hash": "sha256-TCo+vb3ZYQMYdsBbPRuH0BF+Y\/obH2YSNSPKEyVZqlc=",
+      "hash": "sha256-6VyQOAavZqSpcExpITegCIOXPnl6nuKUiWKfY8aL\/d4=",
       "url": "_framework\/Money.Blazor.Host.dll"
     },
     {
-      "hash": "sha256-65nIFVzLGA+MTStHT05NFQxcbH9TDypPORUz3UQXjQ8=",
+      "hash": "sha256-5I1CzxkZkfybXZxRZU\/02vA\/4uACHTiakqtClplGars=",
       "url": "_framework\/Money.dll"
     },
     {
-      "hash": "sha256-H6IDMDXRp49zlpjm64kFu9ZSaEiAiHvytiYfHSIc6WM=",
+      "hash": "sha256-G91IzMFP9kfkeZl0bfMXfyC+LTamJAUKPBua5s3xYdo=",
       "url": "_framework\/Money.Models.dll"
     },
     {
@@ -321,7 +321,7 @@
       "url": "_framework\/dotnet.7.0.0.wtfrr8w9z3.js"
     },
     {
-      "hash": "sha256-qeZ8\/YGfNkEdIQwzTH0TomsKq9IyYZJ\/bCb8GxTTfhQ=",
+      "hash": "sha256-4e6eLxlz86RVjgP+GxZX4nXaAW3NWEzIs9TtVn8oTPk=",
       "url": "_framework\/dotnet.wasm"
     },
     {
@@ -377,7 +377,7 @@
       "url": "index.html"
     },
     {
-      "hash": "sha256-G4rsGezXhRxHSE0wA61bVIwiJCwLtc7e16OS27faUgA=",
+      "hash": "sha256-R1vAW3kHMAVOvuf3sY+g6K2bQW264OKF3jztXwNLJlU=",
       "url": "js\/site.js"
     },
     {
@@ -721,5 +721,5 @@
       "url": "service-worker.register.js"
     }
   ],
-  "version": "s9b5hrlE"
+  "version": "kdrwmQWP"
 };
