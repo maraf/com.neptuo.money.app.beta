@@ -40,7 +40,7 @@
       "Money.Accounts.dll": "sha256-\/1r8pifLqVfVxbJNPPZAiphi36+\/FVCpSYZ03Gad2ck=",
       "Money.Accounts.Models.dll": "sha256-y\/LVItwY1iSfI1Wt1g9GXFL9If6M2H165fPR0z4lGN8=",
       "Money.Api.Shared.dll": "sha256-XB0QJ3u5Tpov1ABcm1KODjbaZ0IO9\/D7TJVQ9YgAD1w=",
-      "Money.Blazor.Host.dll": "sha256-6VyQOAavZqSpcExpITegCIOXPnl6nuKUiWKfY8aL\/d4=",
+      "Money.Blazor.Host.dll": "sha256-zC1N1QL9Mo2PU+r59O\/aeIjx6JZLrl\/AbfqqVE+S7Xs=",
       "Money.dll": "sha256-5I1CzxkZkfybXZxRZU\/02vA\/4uACHTiakqtClplGars=",
       "Money.Models.dll": "sha256-G91IzMFP9kfkeZl0bfMXfyC+LTamJAUKPBua5s3xYdo=",
       "Neptuo.dll": "sha256-zexkBANv0usC5by9GjEaBJHkbQY4VF6Ecl+u+ZboNJo=",
@@ -87,7 +87,7 @@
     "runtime": {
       "dotnet.7.0.0.wtfrr8w9z3.js": "sha256-9bqx3B9HMUBcn8vAwhb7uFCB0JhVAzHoB+\/Mh8FtXfs=",
       "dotnet.timezones.blat": "sha256-NFPG+mWpX1lpilZGC5d9W\/8+Yjx+6oW2ujo2u+HYW1Q=",
-      "dotnet.wasm": "sha256-4e6eLxlz86RVjgP+GxZX4nXaAW3NWEzIs9TtVn8oTPk=",
+      "dotnet.wasm": "sha256-QHVMcpqMxtXS+as597Y4TxI8+7TrzBbreXqfAcQkztI=",
       "icudt_CJK.dat": "sha256-SZLtQnRc0JkwqHab0VUVP7T3uBPSeYzxzDnpxPpUnHk=",
       "icudt_EFIGS.dat": "sha256-l7NtS3cI+3VUoQ2XQvlzMb8x4Ow1BtnOJNLWc6bifW0=",
       "icudt_no_CJK.dat": "sha256-SNAStZO8ryN4gEbGzRYHea+b+VMpFMMNWXKTM3Y1gH4=",
@@ -96,7 +96,7 @@
     "runtimeAssets": {
       "dotnet.wasm": {
         "behavior": "dotnetwasm",
-        "hash": "sha256-4e6eLxlz86RVjgP+GxZX4nXaAW3NWEzIs9TtVn8oTPk="
+        "hash": "sha256-QHVMcpqMxtXS+as597Y4TxI8+7TrzBbreXqfAcQkztI="
       }
     },
     "satelliteResources": null
