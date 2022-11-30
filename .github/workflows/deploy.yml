@@ -1,0 +1,32 @@
+on:
+  workflow_dispatch:
+    inputs:
+      commitHash:
+        description: 'Commit hash'
+        required: true
+        default: 'HEAD'
+        type: string
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3 
+        with:
+          repository: 'maraf/Money'
+          ref: '${{ inputs.commitHash }}'
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: '7.0.x'
+      - name: Install wasm-tools
+        run: dotnet workload install wasm-tools
+      - name: Build
+        run: dotnet build ./src/Money.Blazor.Host/Money.Blazor.Host.csproj -c Release -p:PublishDomain=beta.app.money.neptuo.com -p:RunAOTCompilation=true
+      - name: Deploy to GitHub Pages
+        if: success()
+        uses: crazy-max/ghaction-github-pages@v3
+        with:
+          target_branch: master
+          build_dir: ./src/Money.Blazor.Host/bin/Release/net7.0/wwwroot
