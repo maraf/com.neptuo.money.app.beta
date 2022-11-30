@@ -26,7 +26,6 @@ jobs:
         run: dotnet build ./src/Money.Blazor.Host/Money.Blazor.Host.csproj -c Release -p:PublishDomain=beta.app.money.neptuo.com -p:RunAOTCompilation=true
       - name: Deploy to GitHub Pages
         if: success()
-        uses: crazy-max/ghaction-github-pages@v3
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
-          target_branch: master
-          build_dir: ./src/Money.Blazor.Host/bin/Release/net7.0/wwwroot
+          folder: ./src/Money.Blazor.Host/bin/Release/net7.0/wwwroot
