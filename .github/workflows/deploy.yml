@@ -3,8 +3,6 @@ on:
     inputs:
       commitHash:
         description: 'Commit hash'
-        required: true
-        default: 'HEAD'
         type: string
 
 jobs:
