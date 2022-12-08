@@ -25,7 +25,7 @@
       "url": "_framework\/icudt.dat"
     },
     {
-      "hash": "sha256-SUzKQ8ZeJD6OclXyXZUeiBCf7plKD4gwtFOSLlMLnzE=",
+      "hash": "sha256-o3v6ycgOvVahQ1x7ija4wspwTXlngFl+M\/kmW5n15fo=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -149,27 +149,27 @@
       "url": "_framework\/Microsoft.Net.Http.Headers.dll"
     },
     {
-      "hash": "sha256-PPeAUtcBK8w\/XKfZzb7MaS\/waIrsLgkHhgGTOy4P17A=",
+      "hash": "sha256-AywJmDcxArWlb+D2UtiMpGEL6rJP8YSSN7rmbIZgPEs=",
       "url": "_framework\/Money.Accounts.dll"
     },
     {
-      "hash": "sha256-H\/17BACMPLNh1HKdjQpN8Nb2qaJB\/2eCqYZ0SiLfYmc=",
+      "hash": "sha256-mlYMl1H1IAa9OGTFH6IbET2snkFVugNSrl8GADhlfbs=",
       "url": "_framework\/Money.Accounts.Models.dll"
     },
     {
-      "hash": "sha256-fcNmpAK6eb6vuNAGEwj3moIwi6p+y2YAqZJATFyMwD8=",
+      "hash": "sha256-ZvUFZGpMrv1FWPqICccQRY36fcX\/BFFWZi9BgA3VPgM=",
       "url": "_framework\/Money.Api.Shared.dll"
     },
     {
-      "hash": "sha256-9SM5nF4K1xYy\/5jfEZlM3avY8sUIqT6kfO4H7ZjnWkQ=",
+      "hash": "sha256-CK+0Y3zDF1umTuvPHDkukfuYHGoG5OCe1Lkb7S5DLdI=",
       "url": "_framework\/Money.Blazor.Host.dll"
     },
     {
-      "hash": "sha256-3hYkaCQeEMjoFeyntnMHJWfgOXcTjlUIxbrmT4jEOFQ=",
+      "hash": "sha256-hkWSDK2mAVLFPM5iPu6k1iWS5WI1MrSq5qcX4NuuFDg=",
       "url": "_framework\/Money.dll"
     },
     {
-      "hash": "sha256-rNejGmA2QOnKXSSTcTmL2YiNjnnqy7OVVreiMOzXQR4=",
+      "hash": "sha256-MM9nlLMge4CXmETuZ4a1gzpz\/1OOrN7rD6dAR3Yl1u0=",
       "url": "_framework\/Money.Models.dll"
     },
     {
@@ -321,7 +321,7 @@
       "url": "_framework\/dotnet.7.0.0.lp72xlgm5z.js"
     },
     {
-      "hash": "sha256-1RqK+kTeNiCGFnD7Onl6HAzHaJjl3CZHnAMJfE\/0K+M=",
+      "hash": "sha256-YCyR0odwPoOzlVwoPjZddYXiAlpXIMGIBcBpX5TaWVw=",
       "url": "_framework\/dotnet.wasm"
     },
     {
@@ -721,5 +721,5 @@
       "url": "service-worker.register.js"
     }
   ],
-  "version": "9GdMheF5"
+  "version": "1xYeB4FR"
 };
