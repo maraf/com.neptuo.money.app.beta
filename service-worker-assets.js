@@ -25,7 +25,7 @@
       "url": "_framework\/icudt.dat"
     },
     {
-      "hash": "sha256-o3v6ycgOvVahQ1x7ija4wspwTXlngFl+M\/kmW5n15fo=",
+      "hash": "sha256-EN\/OPjNCtMtPl+Zv0hVbtYRqg6o36Jqqw4STxljRYaA=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -161,7 +161,7 @@
       "url": "_framework\/Money.Api.Shared.dll"
     },
     {
-      "hash": "sha256-CK+0Y3zDF1umTuvPHDkukfuYHGoG5OCe1Lkb7S5DLdI=",
+      "hash": "sha256-cqxn\/BGuV2GPYtW\/4gg99KDFxfTmEGG5tDVD6y+qPgI=",
       "url": "_framework\/Money.Blazor.Host.dll"
     },
     {
@@ -321,7 +321,7 @@
       "url": "_framework\/dotnet.7.0.0.lp72xlgm5z.js"
     },
     {
-      "hash": "sha256-YCyR0odwPoOzlVwoPjZddYXiAlpXIMGIBcBpX5TaWVw=",
+      "hash": "sha256-bEVskmxZfgDX55IinxWTduy0fL+SrF\/qXx3xpSSNPQw=",
       "url": "_framework\/dotnet.wasm"
     },
     {
@@ -721,5 +721,5 @@
       "url": "service-worker.register.js"
     }
   ],
-  "version": "1xYeB4FR"
+  "version": "nfX6tb+i"
 };
