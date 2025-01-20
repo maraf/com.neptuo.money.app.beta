@@ -6,29 +6,60 @@ window.Bootstrap = {
         Show: function (container) {
             var $container = $(container);
             if (!$container.data("modal-initialized")) {
+                var modal = new bootstrap.Modal(container, {});
+                $container.data("modal", modal);
+
                 $container.data("modal-initialized", true).on('shown.bs.modal', function () {
                     var $select = $container.find("[data-select]");
                     if ($select.length > 0) {
                         $select[0].setSelectionRange(0, $select[0].value.length)
                     }
 
-                    $container.find('[data-autofocus]').first().trigger('focus');
+                    const autofocus = $container.find('[data-autofocus]');
+                    if (autofocus.length > 0) {
+                        autofocus.first().trigger('focus');
+                    }
                 });
             }
 
-            $container.modal({
-                "show": true,
-                "focus": true
-            });
+            $container.data("modal").show();
         },
         Hide: function (container) {
-            $(container).modal('hide');
+            $(container).data("modal").hide();
         },
         IsOpen: function (container) {
             return $(container).hasClass("show");
         },
         Dispose: function (container) {
-            $(container).modal('dispose');
+            $(container).data("modal").dispose();
+        }
+    },
+    Offcanvas: {
+        Initialize: function (interop, container) {
+            let offcanvas = bootstrap.Offcanvas.getInstance(container);
+            if (!offcanvas) {
+                offcanvas = new bootstrap.Offcanvas(container);
+                container.addEventListener("show.bs.offcanvas", () => {
+                    interop.invokeMethodAsync("Offcanvas.VisibilityChanged", true);
+                });
+                container.addEventListener("hide.bs.offcanvas", () => {
+                    interop.invokeMethodAsync("Offcanvas.VisibilityChanged", false);
+                });
+            }
+        },
+        Show: function (container) {
+            bootstrap.Offcanvas.getInstance(container).show()
+        },
+        Hide: function (container) {
+            bootstrap.Offcanvas.getInstance(container).hide();
+        },
+        Dispose: function (container) {
+            bootstrap.Offcanvas.getInstance(container).dispose();
+        }
+    },
+    Theme: {
+        Apply: function (theme) {
+            document.documentElement.setAttribute("data-bs-theme", theme);
         }
     }
 };
@@ -38,7 +69,7 @@ window.Network = {
         function handler() {
             interop.invokeMethodAsync("Network.StatusChanged", navigator.onLine);
         }
-        
+
         window.addEventListener('online', handler);
         window.addEventListener('offline', handler);
 
@@ -95,22 +126,40 @@ window.Money = {
     FocusElementById: function (id) {
         const element = document.getElementById(id);
         if (element) {
-            element.focus();
+            const $element = $(element);
+            const $modal = $element.parents(".modal");
+            if ($modal.length > 0 && (!$modal.data("modal") || $modal.data("modal")._isTransitioning)) {
+                const modal = $modal[0];
+                const eventHandler = e => {
+                    element.focus();
+                    modal.removeEventListener("shown.bs.modal", eventHandler);
+                }
+                modal.addEventListener("shown.bs.modal", eventHandler);
+            } else {
+                element.focus();
+            }
+
+            if ($(element).is("[data-select]")) {
+                element.setSelectionRange(0, element.value.length)
+            }
         }
-    }
+    },
+    WaitForDotNet: () => window.Money._DotNetPromise,
+    DotNetReady: () => window.Money._DotNetPromiseResolve()
 };
+window.Money._DotNetPromise = new Promise(resolve => window.Money._DotNetPromiseResolve = resolve);
 
 window.PullToRefresh = {
     Initialize: function (interop) {
         const container = document.body;
         const listenerOptions = { passive: true };
-        
+
         const prerequisities = () => !document.querySelector(".modal.fade.show") && document.querySelector("nav.navbar-dark .navbar-collapse.collapse");
-        
+
         refreshClosure = (() => {
             const treshold = 200;
             const $ui = $(".refresher");
-            
+
             let _isActive = false;
             let _startX;
             let _startY;
@@ -122,7 +171,7 @@ window.PullToRefresh = {
                 _startY = 0;
                 _lastDeltaX = 0;
                 _lastDeltaY = 0;
-    
+
                 if (document.scrollingElement.scrollTop === 0 && prerequisities()) {
                     _startX = Math.floor(e.touches[0].pageX);
                     _startY = Math.floor(e.touches[0].pageY);
@@ -146,18 +195,19 @@ window.PullToRefresh = {
                 if (_isActive && _lastDeltaY > treshold && _lastDeltaX < (treshold / 2) && prerequisities()) {
                     interop.invokeMethodAsync("PullToRefresh.Pulled");
                 }
-    
+
                 $ui.removeClass("visible");
             };
 
             return { start, move, end };
         })();
-        
+
         swipeClosure = (() => {
-            const treshold = 100;
+            const tresholdX = 100;
+            const tresholdY = 100;
             const $leftUi = $(".swipe-left");
             const $rightUi = $(".swipe-right");
-            
+
             let _isActive = false;
             let _startX;
             let _startY;
@@ -185,16 +235,16 @@ window.PullToRefresh = {
                 _startY = 0;
                 _lastDeltaX = 0;
                 _lastDeltaY = 0;
-    
+
                 if (prerequisities()) {
                     _startX = Math.floor(e.touches[0].pageX);
                     _startY = Math.floor(e.touches[0].pageY);
-                    if (_startX < (treshold / 2)) {
+                    if (_startX < (tresholdX / 2)) {
                         _isActive = 1;
                         return;
                     }
-                    
-                    if (window.innerWidth - _startX < (treshold / 2)) {
+
+                    if (window.innerWidth - _startX < (tresholdX / 2)) {
                         _isActive = 2;
                         return;
                     }
@@ -206,14 +256,27 @@ window.PullToRefresh = {
                 _lastDeltaX = Math.floor(Math.floor(e.touches[0].pageX) - _startX);
                 _lastDeltaY = Math.floor(Math.floor(e.touches[0].pageY) - _startY);
 
-                if (_isActive === 1) {
-                    $leftUi.css("margin-left", Math.min(_lastDeltaX, treshold * 2));
-                } else if (_isActive === 2) {
-                    _lastDeltaX *= -1;
-                    $rightUi.css("margin-right", Math.min(_lastDeltaX, treshold * 2));
+                if (Math.abs(_lastDeltaY) > tresholdY) {
+                    _isActive = false;
+                    swapLeftIcon(false);
+                    swapRightIcon(false);
+                    $leftUi.css("margin-left", 0);
+                    $rightUi.css("margin-right", 0);
+                    return;
                 }
 
-                if (_isActive && _lastDeltaX > treshold && _lastDeltaY < (treshold * 2) && prerequisities()) {
+                if (Math.abs(_lastDeltaX) < 20) {
+                    return;
+                }
+
+                if (_isActive === 1) {
+                    $leftUi.css("margin-left", Math.min(_lastDeltaX, tresholdX * 2));
+                } else if (_isActive === 2) {
+                    _lastDeltaX *= -1;
+                    $rightUi.css("margin-right", Math.min(_lastDeltaX, tresholdX * 2));
+                }
+
+                if (_isActive && _lastDeltaX > tresholdX && _lastDeltaY < tresholdY && prerequisities()) {
                     if (_isActive === 1) {
                         swapLeftIcon(true);
                     } else if (_isActive === 2) {
@@ -226,12 +289,12 @@ window.PullToRefresh = {
                 swapLeftIcon(false);
                 swapRightIcon(false);
             };
-            
+
             const end = () => {
                 $leftUi.css("margin-left", 0);
                 $rightUi.css("margin-right", 0);
 
-                if (_isActive && _lastDeltaX > treshold && _lastDeltaY < (treshold * 2) && prerequisities()) {
+                if (_isActive && _lastDeltaX > tresholdX && _lastDeltaY < tresholdY && prerequisities()) {
                     if (_isActive === 1) {
                         interop.invokeMethodAsync("Swiped.Left");
                     }
@@ -257,3 +320,10 @@ window.PullToRefresh = {
         container.addEventListener("touchend", () => closures.forEach(c => c.end()), listenerOptions);
     }
 }
+
+Blazor.start({
+    configureRuntime: dotnet => dotnet.withEnvironmentVariable(
+        "ALLOWED_LOG_SCOPE_PREFIXES", 
+        window.localStorage.getItem("allowedLogScopePrefixes") ?? ""
+    )
+});
