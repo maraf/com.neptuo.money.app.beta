@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "Money.Blazor.Host",
   "resources": {
-    "hash": "sha256-L6uMedlZQYEq4N5+fm0ezPsyzAXfaGpP/sOTa2gutoE=",
+    "hash": "sha256-OqZt2YuOPXiRlsgDXmc4eVlQcYnP5wZOj39yW9R98s8=",
     "fingerprinting": {
       "Blazored.LocalStorage.rwkhu6c6n9.wasm": "Blazored.LocalStorage.wasm",
       "Blazored.SessionStorage.f0ymuyiwwq.wasm": "Blazored.SessionStorage.wasm",
@@ -32,13 +32,13 @@
       "Microsoft.Extensions.Primitives.kfvodmrc6u.wasm": "Microsoft.Extensions.Primitives.wasm",
       "Microsoft.JSInterop.yui3jtddf1.wasm": "Microsoft.JSInterop.wasm",
       "Microsoft.JSInterop.WebAssembly.heoad7mujs.wasm": "Microsoft.JSInterop.WebAssembly.wasm",
-      "Money.Accounts.Models.q0xpw9rn35.wasm": "Money.Accounts.Models.wasm",
-      "Money.Accounts.x6drc2ffns.wasm": "Money.Accounts.wasm",
-      "Money.Api.Shared.j18te4vgw3.wasm": "Money.Api.Shared.wasm",
-      "Money.Blazor.Host.pe7hh1l6p2.wasm": "Money.Blazor.Host.wasm",
-      "Money.Models.tl6kx2qoop.wasm": "Money.Models.wasm",
-      "Money.6ebrgsdcf0.wasm": "Money.wasm",
-      "Neptuo.2vgyn447v9.wasm": "Neptuo.wasm",
+      "Money.Accounts.Models.uzzvi21t2b.wasm": "Money.Accounts.Models.wasm",
+      "Money.Accounts.362dj2eux3.wasm": "Money.Accounts.wasm",
+      "Money.Api.Shared.xmo9yqj6ce.wasm": "Money.Api.Shared.wasm",
+      "Money.Blazor.Host.rtqifvd8np.wasm": "Money.Blazor.Host.wasm",
+      "Money.Models.h6b0d9rkte.wasm": "Money.Models.wasm",
+      "Money.jv1igumbvs.wasm": "Money.wasm",
+      "Neptuo.scysqu6uss.wasm": "Neptuo.wasm",
       "System.Collections.Concurrent.8otznucwkp.wasm": "System.Collections.Concurrent.wasm",
       "System.Collections.Immutable.b6960jm27e.wasm": "System.Collections.Immutable.wasm",
       "System.Collections.NonGeneric.dapxzq04aq.wasm": "System.Collections.NonGeneric.wasm",
@@ -76,7 +76,7 @@
       "System.Threading.Channels.7r3kw6uzwl.wasm": "System.Threading.Channels.wasm",
       "System.Threading.204s35ql03.wasm": "System.Threading.wasm",
       "dotnet.native.tcd4yiy7xa.js": "dotnet.native.js",
-      "dotnet.native.l0bg63t8k7.wasm": "dotnet.native.wasm",
+      "dotnet.native.85zbhmo3y0.wasm": "dotnet.native.wasm",
       "dotnet.js": "dotnet.js",
       "dotnet.runtime.rubq0v1yiy.js": "dotnet.runtime.js",
       "icudt.oh1zvcfom8.dat": "icudt.dat"
@@ -88,7 +88,7 @@
       "dotnet.runtime.rubq0v1yiy.js": "sha256-gypqZnsxxUh4y4EJmawvOCaX4hoTaesVGwIgWXwZcNw="
     },
     "wasmNative": {
-      "dotnet.native.l0bg63t8k7.wasm": "sha256-xR38hsEE0VlI+ta/ejHJjHIh99K2R9CAg0g7q7S/5j8="
+      "dotnet.native.85zbhmo3y0.wasm": "sha256-rI+MU9mmP+tMn5aGNuwhQvY5HKLR6kmOPhNgCwHFI60="
     },
     "icu": {
       "icudt.oh1zvcfom8.dat": "sha256-tO5O5YzMTVSaKBboxAqezOQL9ewmupzV2JrB5Rkc8a4="
@@ -123,13 +123,13 @@
       "Microsoft.Extensions.Primitives.kfvodmrc6u.wasm": "sha256-IKr4N42tnuEn8u9YSVNA+v6E/Pg+lH95pAAO8MshhUQ=",
       "Microsoft.JSInterop.yui3jtddf1.wasm": "sha256-OhmehbllJ8koKB/o+Jm/bxlPwMJnbrRAE2Bh7D3YypU=",
       "Microsoft.JSInterop.WebAssembly.heoad7mujs.wasm": "sha256-99wG3VH14sWkwPaF5rX6YAcJvtAhDuqonwihvj2m5HA=",
-      "Money.Accounts.Models.q0xpw9rn35.wasm": "sha256-ljg05Sa5jZmlrufF3La8OB3NzGWAhKWWmi9HWAtjUAE=",
-      "Money.Accounts.x6drc2ffns.wasm": "sha256-dwDFzZqh9V3G8kjac5VkG+0S9dVFNdIRY/Ss76Mj44w=",
-      "Money.Api.Shared.j18te4vgw3.wasm": "sha256-CeRGqQSwPDOXNZ2UXqwNcAggxpcvO9MR0jvuB8L8yDs=",
-      "Money.Blazor.Host.pe7hh1l6p2.wasm": "sha256-P5tSNNwQw0WKKzFIlXXIHdYY9dN8nPgPkp0vctnaRfI=",
-      "Money.Models.tl6kx2qoop.wasm": "sha256-cQcr8DOjwwIQRkgW7MZPTOkq6zwFVADduCoxLjEbN9Y=",
-      "Money.6ebrgsdcf0.wasm": "sha256-kr26sjI7zHngysVfhQeE7w1iMAqO8zCjBHaWSZrn2NU=",
-      "Neptuo.2vgyn447v9.wasm": "sha256-Im8Mo0X8fhOqCX6/I5XaMYah5FbFhKBfQN3qML4ntJA=",
+      "Money.Accounts.Models.uzzvi21t2b.wasm": "sha256-Bk7ci7jwB1XU5XSIjLQry+kNdEZ7Z3fj1lnJnhwXJXQ=",
+      "Money.Accounts.362dj2eux3.wasm": "sha256-O+dQv3y9Ud1LIAsSt86EFiqmGnX9mruzQeN4zw49a88=",
+      "Money.Api.Shared.xmo9yqj6ce.wasm": "sha256-+Z4Kqo/nx0Zg0xcY9LdPbgfCB6PgYAt7CmMrhNnnLF8=",
+      "Money.Blazor.Host.rtqifvd8np.wasm": "sha256-sYyXXg3GjiTHGQGROOY6HxemK8EeCJr3SCU/OVqMMqw=",
+      "Money.Models.h6b0d9rkte.wasm": "sha256-mdkVAQiWUYQ6YtXpCPYpuFpnw8UOZ3H3u9zfAuuBUFc=",
+      "Money.jv1igumbvs.wasm": "sha256-/0F9hzkxvo9KSB3IvTr4zY9jXYwUhuKAZHFm8l+VAYo=",
+      "Neptuo.scysqu6uss.wasm": "sha256-7A4wx/h7r+xamiPZ70fF78TcrezrueA+xzsT01qznoY=",
       "System.Collections.Concurrent.8otznucwkp.wasm": "sha256-CBDVDv5zc0bZ73DCYeCnJjwc30l+b48u9+cm5I5VRkY=",
       "System.Collections.Immutable.b6960jm27e.wasm": "sha256-DYCqwL+4Wjvr1a9yALwNP2nj0HYxFJG6N0mWv7b0nto=",
       "System.Collections.NonGeneric.dapxzq04aq.wasm": "sha256-RanoxNApifAI6TcO73YnMPl2UVpvYb7SDszzLVbNYK8=",
