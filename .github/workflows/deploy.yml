@@ -21,7 +21,7 @@ jobs:
       - name: Install wasm-tools
         run: dotnet workload install wasm-tools
       - name: Build
-        run: dotnet publish ./src/Money.Blazor.Host/Money.Blazor.Host.csproj -c Release -p:PublishDomain=beta.app.money.neptuo.com -p:RunAOTCompilation=true -o ./artifacts
+        run: dotnet publish ./src/Money.Blazor.Host/Money.Blazor.Host.csproj -c Release -p:PublishDomain=beta.app.money.neptuo.com -p:GitCommitId="${{ inputs.commitHash }}" -p:RunAOTCompilation=true -o ./artifacts
       - name: Deploy to GitHub Pages
         if: success()
         uses: JamesIves/github-pages-deploy-action@v4
